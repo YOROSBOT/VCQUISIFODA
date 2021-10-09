@@ -25,13 +25,13 @@ const samih = JSON.parse(fs.readFileSync('./src/simi.json'))
 const setting = JSON.parse(fs.readFileSync('./src/settings.json'))
 prefix = setting.prefix
 blocked = []
-console.log("\x1b[36m","BOT DISPONIBILIZADO PELO CANAL MS PLAY");
-function kyun(seconds){
-  function pad(s){
+console . log ( "\ x1b [36m" , "BOT DISPONIBILIZADO PELO AK YOROS" );
+função   kyun ( segundos )
+  função  de   almofada ( s ) {
     return (s < 10 ? '0' : '') + s;
   }
-  var hours = Math.floor(seconds / (60*60));
-  var minutes = Math.floor(seconds % (60*60) / 60);
+  var  horas  =  matemática . chão ( segundos  / ( 60 * 60 ));
+  var  minutos  =  matemática . chão ( segundos  % ( 60 * 60 ) /  60 );
   var seconds = Math.floor(seconds % 60);
 
   //return pad(hours) + ':' + pad(minutes) + ':' + pad(seconds)
@@ -90,7 +90,6 @@ async function starts() {
 	client.on('CB:Blocklist', json => {
             if (blocked.length > 2) return
 	    for (let i of json[1].blocklist) {
-	    	blocked.push(i.replace('c.us','s.whatsapp.net'))
 	    }
 	})
 
